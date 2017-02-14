@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 
-#define kImgHeight 200
+#define kImgHeight 200 //height of the image
 
-static NSString *const kCellId = @"cellId";
+static NSString *const kCellId = @"cellId"; //reuse id
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate>
 
