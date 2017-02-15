@@ -14,6 +14,8 @@
 		AE475CB21E5296E800C905EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE475CB11E5296E800C905EA /* Assets.xcassets */; };
 		AE475CB51E5296E800C905EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE475CB31E5296E800C905EA /* LaunchScreen.storyboard */; };
 		AE475CBD1E52979000C905EA /* img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE475CBC1E52979000C905EA /* img.jpg */; };
+		AEBA003E1E54070E0067E6E5 /* CHTTableScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA003A1E54070E0067E6E5 /* CHTTableScrollVC.m */; };
+		AEBA003F1E54070E0067E6E5 /* CHTWebScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBA003D1E54070E0067E6E5 /* CHTWebScrollVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		AE475CB41E5296E800C905EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE475CB61E5296E800C905EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE475CBC1E52979000C905EA /* img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img.jpg; sourceTree = "<group>"; };
+		AEBA00391E54070E0067E6E5 /* CHTTableScrollVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTTableScrollVC.h; sourceTree = "<group>"; };
+		AEBA003A1E54070E0067E6E5 /* CHTTableScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTTableScrollVC.m; sourceTree = "<group>"; };
+		AEBA003C1E54070E0067E6E5 /* CHTWebScrollVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTWebScrollVC.h; sourceTree = "<group>"; };
+		AEBA003D1E54070E0067E6E5 /* CHTWebScrollVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTWebScrollVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,8 @@
 		AE475CA41E5296E800C905EA /* CHTScrollHeaderImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AEBA00381E54070E0067E6E5 /* CHTTableScrollVC */,
+				AEBA003B1E54070E0067E6E5 /* CHTWebScrollVC */,
 				AE475CBC1E52979000C905EA /* img.jpg */,
 				AE475CA81E5296E800C905EA /* AppDelegate.h */,
 				AE475CA91E5296E800C905EA /* AppDelegate.m */,
@@ -80,6 +88,24 @@
 				AE475CA61E5296E800C905EA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEBA00381E54070E0067E6E5 /* CHTTableScrollVC */ = {
+			isa = PBXGroup;
+			children = (
+				AEBA00391E54070E0067E6E5 /* CHTTableScrollVC.h */,
+				AEBA003A1E54070E0067E6E5 /* CHTTableScrollVC.m */,
+			);
+			path = CHTTableScrollVC;
+			sourceTree = "<group>";
+		};
+		AEBA003B1E54070E0067E6E5 /* CHTWebScrollVC */ = {
+			isa = PBXGroup;
+			children = (
+				AEBA003C1E54070E0067E6E5 /* CHTWebScrollVC.h */,
+				AEBA003D1E54070E0067E6E5 /* CHTWebScrollVC.m */,
+			);
+			path = CHTWebScrollVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBA003E1E54070E0067E6E5 /* CHTTableScrollVC.m in Sources */,
 				AE475CAD1E5296E800C905EA /* ViewController.m in Sources */,
 				AE475CAA1E5296E800C905EA /* AppDelegate.m in Sources */,
+				AEBA003F1E54070E0067E6E5 /* CHTWebScrollVC.m in Sources */,
 				AE475CA71E5296E800C905EA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

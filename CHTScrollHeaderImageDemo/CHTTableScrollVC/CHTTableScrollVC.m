@@ -1,40 +1,30 @@
-#CHTScrollHeaderImageDemo
-UITableView 下拉头部图片放大效果
+//
+//  CHTTableScrollVC.m
+//  CHTScrollHeaderImageDemo
+//
+//  Created by cht on 2017/2/15.
+//  Copyright © 2017年 cht. All rights reserved.
+//
 
-![](https://github.com/ChanRoy/CHTScrollHeaderImageDemo/blob/master/CHTScrollHeaderImageDemo.gif)
+#import "CHTTableScrollVC.h"
 
-## 简介
-*UITableView 头部图片随着下拉放大的效果实现*
-
-*具体效果见上图*
-
-## 实现过程
-直接上代码，需要注意的都在代码中有注释:
-
-* 宏定义及常量设置
-
-```
 #define kImgHeight 200 //height of the image
+
 static NSString *const kCellId = @"cellId"; //reuse id
-```
 
-* interface
-
-```
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate>
+@interface CHTTableScrollVC ()<UITableViewDelegate, UITableViewDataSource,UIScrollViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
+
 @property (nonatomic, strong) UIImageView *headerImageView;
 
 @end
-```
-* implementation
 
-```
+@implementation CHTTableScrollVC
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
+    // Do any additional setup after loading the view.
     [self.view addSubview:self.tableView];
     [self.tableView addSubview:self.headerImageView];
 }
@@ -83,7 +73,7 @@ static NSString *const kCellId = @"cellId"; //reuse id
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     if (scrollView == self.tableView) {
-       
+        
         CGPoint offset = scrollView.contentOffset;
 //        NSLog(@"%.2f",offset.y);
         if (offset.y < -kImgHeight) {
@@ -97,5 +87,10 @@ static NSString *const kCellId = @"cellId"; //reuse id
     }
 }
 
-```
-具体细节可参照Demo。
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+@end
