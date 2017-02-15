@@ -30,6 +30,7 @@ static CGFloat const kImgHeight = 200.0;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
     [self.view addSubview:self.webView];
+//    [self.webView.scrollView addSubview:self.headerImageView];
 }
 
 #pragma mark - lazy load
@@ -39,6 +40,7 @@ static CGFloat const kImgHeight = 200.0;
         _webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT-64)];
         _webView.delegate = self;
         _webView.scrollView.delegate = self;
+//        _webView.scrollView.contentInset = UIEdgeInsetsMake(kImgHeight, 0, 0, 0);
         [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.zhihu.com/explore"]]];
     }
     return _webView;
@@ -55,7 +57,7 @@ static CGFloat const kImgHeight = 200.0;
 }
 
 #pragma mark - webview delegate
-
+//在webview delegate中写这部分代码的作用：防止html未加载出来时页面错乱
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     
     _webView.scrollView.contentInset = UIEdgeInsetsMake(kImgHeight, 0, -2*kImgHeight, 0);
